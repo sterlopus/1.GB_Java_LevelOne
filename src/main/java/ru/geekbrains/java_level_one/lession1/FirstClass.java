@@ -19,7 +19,7 @@ public class FirstClass {
     private static void checkSumSign () {
         int a = 0;
         int b = 2;
-        if ( (a + b) >= 0 ) out.println("Positive sum");
+        if ( (a + b) >= 0 ) out.println("Positive sum"); //"out.println();" without "System" - result of IDEA sout shortcut
         else {out.println("Negative sum");
         }
     }
