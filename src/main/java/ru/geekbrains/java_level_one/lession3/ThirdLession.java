@@ -24,14 +24,14 @@ public class ThirdLession {
         System.out.println("\nTask#6");
         arrayExtremums();
 
+        int[] myArray={1,2,3,4,5,3,2};
         System.out.println("\nTask#7");
-        int[] myArray={2,2,2,1,2,2,10,1};
         System.out.println(checkBalance(myArray));
 
-/*        System.out.println("\nTask#8");
-        System.out.println(Arrays.toString(myArray));
-        shiftArrayLeft(myArray, 2);
-        System.out.println(Arrays.toString(myArray));*/
+        System.out.println("\nTask#8");
+        int[] myArray2={1,2,3,4,5,6,7,8};
+        System.out.println(Arrays.toString(myArray2));
+        System.out.println(Arrays.toString(shiftArrayLeft(myArray2,3)));
 
     }
 
@@ -175,16 +175,19 @@ public class ThirdLession {
         циклично.Для усложнения задачи нельзя пользоваться вспомогательными массивами.Примеры: [1, 2, 3 ]при n = 1
         (на один вправо) ->[3, 1, 2 ]; [3, 5, 6, 1]при n = -2 (на два влево) ->[6, 1, 3, 5 ].При каком n в какую сторону
         сдвиг можете выбирать сами.      */
-        private static void shiftArrayLeft(int[] arr, int shift) {
-            for (int i = 0; i < arr.length; i++) {
-                if ((i+shift)< arr.length){
-                    arr[i]=arr[i+shift];
+
+    private static int[] shiftArrayLeft(int[] arr, int shift) {
+        for (int j = 0; j < shift; j++) {   //repeat one-shifting N times
+            int m = arr[0];
+            for (int i = 0; i < arr.length; i++) {  //shift for 1 place
+                if ((i + 1) < arr.length) {
+                    arr[i] = arr[i + 1];
                 } else {
-
+                    arr[i] = m;
                 }
-
             }
-//            return arr;
         }
+        return arr;
+    }
 
 }
