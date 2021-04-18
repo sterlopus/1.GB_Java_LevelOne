@@ -40,7 +40,7 @@ public class ForthClass {
         } while (true);
     }
 
-    private static void initMap() {
+    private static void initMap() { //game field initialisation
         map = new char[SIZE][SIZE];
         for (int i = 0; i < SIZE; i++) {
             Arrays.fill(map[i],EMPTY_DOT);
@@ -50,13 +50,13 @@ public class ForthClass {
         }
     }
 
-    public static void drawMap() {
+    public static void drawMap() {  //game field to console drawing
         System.out.print("  ");
-        for (int i = 0; i < SIZE; i++) {
+        for (int i = 0; i < SIZE; i++) {    // X-axis drawing
         System.out.print((i+1));
         }
         System.out.println("X");
-        for (int i = 0; i < SIZE; i++) {
+        for (int i = 0; i < SIZE; i++) {    //Y-axis and field drawing
             System.out.print((i+1)+" ");
             for (int j = 0; j < SIZE; j++) {
                 System.out.print(map[i][j]);
@@ -71,7 +71,7 @@ public class ForthClass {
         do {
             x = random.nextInt(SIZE);
             y = random.nextInt(SIZE);
-        } while (map[x][y] != EMPTY_DOT);
+        } while (map[x][y] != EMPTY_DOT);   //check if cell is empty (means its inside game field)
         map[x][y] = O_DOT;
         System.out.println("Machine put O to " + (y + 1) + " " + (x + 1));
         turns++;
@@ -86,7 +86,7 @@ public class ForthClass {
         } while (map[y - 1][x - 1] != EMPTY_DOT);
         map[y - 1][x - 1] = X_DOT;
         turns++;
-        //scanner.close();
+        //scanner.close();  REALLY don't understand yet why we shouldn't close scanner??
     }
 
     private static boolean checkWin(char symbol) {
@@ -94,7 +94,7 @@ public class ForthClass {
     }
 
 
-    private static boolean checkLine(int lineNumber, char symbol) {
+    private static boolean checkLine(int lineNumber, char symbol) { //have to made this method to simplify
         int i = 0;
         int fullLine = 0;
         while (i < SIZE) {
@@ -106,7 +106,7 @@ public class ForthClass {
         return fullLine == SIZE;
     }
 
-    private static boolean checkVertLine(int lineNumber, char symbol) {
+    private static boolean checkVertLine(int lineNumber, char symbol) { //have to made this method to simplify
         int i = 0;
         int fullLine = 0;
         while (i < SIZE) {
