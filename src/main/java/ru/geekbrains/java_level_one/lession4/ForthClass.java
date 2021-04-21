@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class ForthClass {
 
     public static char[][] map;
-    public static int SIZE = 5;
+    public static int SIZE = 8;
     private static final int maxTurns = SIZE * SIZE;
     private static int turns = 0;
     private static final char X_DOT = 'X';
