@@ -23,5 +23,11 @@ public class FifthClass {
             }
         }
 
+//        for (int i = 0; i < staffList.length; i++) {
+//            if (staffList[i].getAge() > 40) {
+//                staffList[i].info();
+//            }
+//        }
+
     }
 }
