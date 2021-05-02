@@ -34,5 +34,4 @@ public class Cat {
             fullness = true;
         }
     }
-
 }

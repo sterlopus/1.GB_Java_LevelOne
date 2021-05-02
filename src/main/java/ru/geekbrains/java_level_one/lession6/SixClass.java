@@ -9,7 +9,7 @@ public class SixClass {
         Dog dogDva = new Dog ("Vinnie");
         Dog dogTri = new Dog ("Barbos");
 
-        dog.swim(200, dog.getSWIM_LIMIT());
+        dog.swim(200, dog.getSWIM_LIMIT()); // не очень нравится вызов констант, как-то странно выглядит, хоть и работает
         dog.run(100, dog.getRUN_LIMIT());
         cat.swim(0, cat.getSWIM_LIMIT());
         cat.run(10, cat.getRUN_LIMIT());
