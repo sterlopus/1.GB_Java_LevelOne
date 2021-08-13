@@ -1,8 +1,8 @@
-package ru.geekbrains.java_level_one.lession1;
+package ru.geekbrains.java_level_two.lession1;
 
-import static java.lang.System.*;
+import static java.lang.System.out;
 
-public class FirstClass {
+public class FirstClass_2 {
 
     public static void main(String[] args) {
         printThreeWords();
